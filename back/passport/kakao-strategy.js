@@ -15,8 +15,7 @@ const cb = async (accessToken, refreshToken, profile, done) => {
 			profileURL: profile._json.properties.profile_image || null,
 			email: profile._json.kakao_account.email || null,
 		}
-		console.log(user)
-		let { success, user:_user } = await findUser('userid', user.userid)
+		let { success, user: _user } = await findUser('userid', user.userid)
 		if(success) {
 			const { idx, status } = _user
 			if(status === '0') {
@@ -33,6 +32,7 @@ const cb = async (accessToken, refreshToken, profile, done) => {
 				if(success && success2) user.idx = idx
 				else done('Error')
 			}
+			else user.idx = idx
 		}
 		else {
 			let { idx: id } = await createSnsUser(user, userSns)
