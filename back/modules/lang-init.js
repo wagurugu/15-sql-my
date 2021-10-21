@@ -30,8 +30,8 @@ module.exports = _lang => {
 					SNS_MSG				: 'sns 회원은 탈퇴 후 다시 로그인 하시면 재가입 됩니다.',
 				},
 				GLOBAL: {
-					LOGO					: '도서관리시스템',
-					TAB_TITLE			: 'Express 게시판',
+					LOGO					: '리선생`s 도서관리시스템',
+					TAB_TITLE			: '리선생`s Express 게시판',
 					NAVI					: ['도서 등록', '도서 리스트', '로그인', '로그아웃', '회원가입', '마이페이지', '회원정보수정', '도서 리스트(VUE)', '회원탈퇴']
 				},
 				LIST: {
